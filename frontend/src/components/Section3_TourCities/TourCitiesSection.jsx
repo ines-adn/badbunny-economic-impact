@@ -28,7 +28,7 @@ const DataQualityBadge = ({ quality }) => {
 
   return (
     <span
-      className={`inline-block px-2 py-1 rounded text-xs font-bold ${bg} ${text} border ${border}`}
+      className={`inline-block px-1.5 md:px-2 py-0.5 md:py-1 rounded text-[10px] md:text-xs font-bold ${bg} ${text} border ${border}`}
       title={tooltip}
     >
       {quality}
@@ -39,14 +39,14 @@ const DataQualityBadge = ({ quality }) => {
 const CityDetailModal = ({ city, onClose }) => {
   if (!city.modelInputs) {
     return (
-      <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4" onClick={onClose}>
-        <div className="bg-white rounded-2xl max-w-2xl w-full p-8" onClick={e => e.stopPropagation()}>
+      <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-2 md:p-4" onClick={onClose}>
+        <div className="bg-white rounded-xl md:rounded-2xl max-w-2xl w-full p-4 md:p-8" onClick={e => e.stopPropagation()}>
           <div className="flex justify-between items-start mb-6">
             <div>
-              <h3 className="text-2xl font-extrabold">{city.city}, {city.country}</h3>
-              <p className="text-[#7F8C8D]">{city.venue}</p>
+              <h3 className="text-xl md:text-2xl font-extrabold">{city.city}, {city.country}</h3>
+              <p className="text-sm md:text-base text-[#7F8C8D]">{city.venue}</p>
             </div>
-            <button onClick={onClose} className="text-[#7F8C8D] hover:text-black">
+            <button onClick={onClose} className="text-[#7F8C8D] active:text-black md:hover:text-black">
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
@@ -64,14 +64,14 @@ const CityDetailModal = ({ city, onClose }) => {
   const results = calculateEconomicImpact(city.modelInputs);
 
   return (
-    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 overflow-y-auto" onClick={onClose}>
-      <div className="bg-white rounded-2xl max-w-4xl w-full p-8 my-8" onClick={e => e.stopPropagation()}>
+    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-2 md:p-4 overflow-y-auto" onClick={onClose}>
+      <div className="bg-white rounded-xl md:rounded-2xl max-w-4xl w-full p-4 md:p-8 my-4 md:my-8" onClick={e => e.stopPropagation()}>
         {/* Header */}
         <div className="flex justify-between items-start mb-6">
           <div>
-            <h3 className="text-2xl font-extrabold">{city.city}, {city.country}</h3>
-            <p className="text-[#7F8C8D]">{city.venue}</p>
-            <p className="text-sm text-[#7F8C8D] mt-1">
+            <h3 className="text-xl md:text-2xl font-extrabold">{city.city}, {city.country}</h3>
+            <p className="text-sm md:text-base text-[#7F8C8D]">{city.venue}</p>
+            <p className="text-xs md:text-sm text-[#7F8C8D] mt-1">
               {city.dates.length} shows • {city.dates[0]} {city.dates.length > 1 && `- ${city.dates[city.dates.length - 1]}`}
             </p>
           </div>
@@ -91,9 +91,9 @@ const CityDetailModal = ({ city, onClose }) => {
         </div>
 
         {/* Known facts */}
-        <div className="mb-6 p-4 rounded-xl bg-[#F8F9FA]">
-          <h4 className="font-bold text-sm mb-3 uppercase">Known Facts</h4>
-          <div className="grid md:grid-cols-2 gap-3 text-sm">
+        <div className="mb-6 p-3 md:p-4 rounded-xl bg-[#F8F9FA]">
+          <h4 className="font-bold text-xs md:text-sm mb-3 uppercase">Known Facts</h4>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-3 text-xs md:text-sm">
             <div><span className="text-[#7F8C8D]">Shows:</span> <strong>{city.shows}</strong></div>
             {city.revenue && <div><span className="text-[#7F8C8D]">Revenue:</span> <strong>{formatCurrency(city.revenue, true)}</strong></div>}
             {city.attendance && <div><span className="text-[#7F8C8D]">Attendance:</span> <strong>{city.attendance.toLocaleString()}</strong></div>}
@@ -118,7 +118,7 @@ const CityDetailModal = ({ city, onClose }) => {
           <h4 className="font-bold uppercase text-sm">Academic Model Calculation</h4>
 
           {/* Quick summary */}
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             <div className="p-3 rounded-xl bg-[#FF6B35]/5 border border-[#FF6B35]/20">
               <p className="text-xs text-[#7F8C8D] mb-1">Direct Spending</p>
               <p className="font-bold text-[#FF6B35]">{formatCurrency(results.step1_directSpending.total, true)}</p>
@@ -170,7 +170,7 @@ const CityDetailModal = ({ city, onClose }) => {
                   href={source.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block p-3 rounded-lg border border-[#E9ECEF] hover:border-[#FF6B35] transition-colors text-sm"
+                  className="block p-3 rounded-lg border border-[#E9ECEF] active:border-[#FF6B35] md:hover:border-[#FF6B35] transition-colors text-sm"
                 >
                   <div className="flex justify-between items-start gap-2">
                     <div>
@@ -216,73 +216,73 @@ export function TourCitiesSection() {
 
       {/* City comparison table */}
       <div className="section-card">
-        <div className="flex justify-between items-center mb-6">
-          <h3 className="text-xl font-bold">City comparison</h3>
-          <div className="flex gap-2">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 mb-4 md:mb-6">
+          <h3 className="text-lg md:text-xl font-bold">City comparison</h3>
+          <div className="flex gap-1.5 md:gap-2 flex-wrap">
             <button
               onClick={() => setSortBy('revenue')}
-              className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-colors ${
-                sortBy === 'revenue' ? 'bg-[#004E89] text-white' : 'bg-[#F8F9FA] text-[#7F8C8D] hover:bg-[#E9ECEF]'
+              className={`px-2 md:px-3 py-1 md:py-1.5 rounded-full text-[10px] md:text-xs font-semibold transition-colors ${
+                sortBy === 'revenue' ? 'bg-[#004E89] text-white' : 'bg-[#F8F9FA] text-[#7F8C8D] active:bg-[#E9ECEF] md:hover:bg-[#E9ECEF]'
               }`}
             >
-              By Revenue
+              Revenue
             </button>
             <button
               onClick={() => setSortBy('shows')}
-              className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-colors ${
-                sortBy === 'shows' ? 'bg-[#004E89] text-white' : 'bg-[#F8F9FA] text-[#7F8C8D] hover:bg-[#E9ECEF]'
+              className={`px-2 md:px-3 py-1 md:py-1.5 rounded-full text-[10px] md:text-xs font-semibold transition-colors ${
+                sortBy === 'shows' ? 'bg-[#004E89] text-white' : 'bg-[#F8F9FA] text-[#7F8C8D] active:bg-[#E9ECEF] md:hover:bg-[#E9ECEF]'
               }`}
             >
-              By Shows
+              Shows
             </button>
             <button
               onClick={() => setSortBy('attendance')}
-              className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-colors ${
-                sortBy === 'attendance' ? 'bg-[#004E89] text-white' : 'bg-[#F8F9FA] text-[#7F8C8D] hover:bg-[#E9ECEF]'
+              className={`px-2 md:px-3 py-1 md:py-1.5 rounded-full text-[10px] md:text-xs font-semibold transition-colors ${
+                sortBy === 'attendance' ? 'bg-[#004E89] text-white' : 'bg-[#F8F9FA] text-[#7F8C8D] active:bg-[#E9ECEF] md:hover:bg-[#E9ECEF]'
               }`}
             >
-              By Attendance
+              Attendance
             </button>
           </div>
         </div>
 
-        <div className="overflow-x-auto">
-          <table className="w-full">
+        <div className="overflow-x-auto -mx-2 md:mx-0">
+          <table className="w-full min-w-[600px]">
             <thead>
               <tr className="border-b-2 border-[#E9ECEF]">
-                <th className="text-left py-3 text-xs font-bold uppercase text-[#7F8C8D]">City</th>
-                <th className="text-center py-3 text-xs font-bold uppercase text-[#7F8C8D]">Shows</th>
-                <th className="text-right py-3 text-xs font-bold uppercase text-[#7F8C8D]">Revenue</th>
-                <th className="text-right py-3 text-xs font-bold uppercase text-[#7F8C8D]">Attendance</th>
-                <th className="text-center py-3 text-xs font-bold uppercase text-[#7F8C8D]">Data</th>
-                <th className="text-center py-3 text-xs font-bold uppercase text-[#7F8C8D]"></th>
+                <th className="text-left py-2 md:py-3 px-2 text-[10px] md:text-xs font-bold uppercase text-[#7F8C8D]">City</th>
+                <th className="text-center py-2 md:py-3 px-1 text-[10px] md:text-xs font-bold uppercase text-[#7F8C8D]">Shows</th>
+                <th className="text-right py-2 md:py-3 px-1 text-[10px] md:text-xs font-bold uppercase text-[#7F8C8D]">Revenue</th>
+                <th className="text-right py-2 md:py-3 px-1 text-[10px] md:text-xs font-bold uppercase text-[#7F8C8D] hidden sm:table-cell">Attendance</th>
+                <th className="text-center py-2 md:py-3 px-1 text-[10px] md:text-xs font-bold uppercase text-[#7F8C8D]">Data</th>
+                <th className="text-center py-2 md:py-3 px-1 text-[10px] md:text-xs font-bold uppercase text-[#7F8C8D]"></th>
               </tr>
             </thead>
             <tbody>
               {sortedCities.map(city => (
                 <tr
                   key={city.id}
-                  className="border-b border-[#E9ECEF] hover:bg-[#F8F9FA] cursor-pointer transition-colors"
+                  className="border-b border-[#E9ECEF] cursor-pointer transition-colors active:bg-[#F8F9FA] md:hover:bg-[#F8F9FA]"
                   onClick={() => setSelectedCity(city)}
                 >
-                  <td className="py-4">
+                  <td className="py-2 md:py-4 px-2">
                     <div>
-                      <p className="font-bold">{city.city}</p>
-                      <p className="text-xs text-[#7F8C8D]">{city.country}</p>
+                      <p className="font-bold text-sm md:text-base">{city.city}</p>
+                      <p className="text-[10px] md:text-xs text-[#7F8C8D]">{city.country}</p>
                     </div>
                   </td>
-                  <td className="text-center font-bold">{city.shows}</td>
-                  <td className="text-right font-bold text-[#FF6B35]">
+                  <td className="text-center font-bold text-sm md:text-base px-1">{city.shows}</td>
+                  <td className="text-right font-bold text-[#FF6B35] text-xs md:text-base px-1">
                     {city.revenue ? formatCurrency(city.revenue, true) : '-'}
                   </td>
-                  <td className="text-right font-bold">
+                  <td className="text-right font-bold text-sm md:text-base px-1 hidden sm:table-cell">
                     {city.attendance ? city.attendance.toLocaleString() : '-'}
                   </td>
-                  <td className="text-center">
+                  <td className="text-center px-1">
                     <DataQualityBadge quality={city.dataQuality} />
                   </td>
-                  <td className="text-center">
-                    <svg className="w-5 h-5 text-[#7F8C8D] inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <td className="text-center px-1">
+                    <svg className="w-4 h-4 md:w-5 md:h-5 text-[#7F8C8D] inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </td>
@@ -292,7 +292,7 @@ export function TourCitiesSection() {
           </table>
         </div>
 
-        <p className="text-xs text-[#7F8C8D] mt-4">
+        <p className="text-[10px] md:text-xs text-[#7F8C8D] mt-3 md:mt-4">
           Click any row to see full economic impact breakdown using the academic model
         </p>
       </div>

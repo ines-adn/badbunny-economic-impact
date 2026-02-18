@@ -126,12 +126,6 @@ export function Layout({ children }: { children: ReactNode }) {
                     The Guardian →
                   </a>
                 </li>
-                <li>
-                  <a href="https://wearemitu.com/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors inline-flex items-center gap-1 underline-offset-4 hover:underline">
-                    We Are Mitú →
-                  </a>
-                </li>
-                <li className="text-white/70">Official press releases</li>
               </ul>
             </div>
             <div>
