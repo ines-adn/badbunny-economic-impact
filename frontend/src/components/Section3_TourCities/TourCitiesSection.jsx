@@ -246,8 +246,8 @@ export function TourCitiesSection() {
           </div>
         </div>
 
-        <div className="overflow-x-auto -mx-2 md:mx-0">
-          <table className="w-full min-w-[600px]">
+        <div className="overflow-x-auto -mx-2 md:mx-0 rounded-lg">
+          <table className="w-full min-w-[550px] md:min-w-[600px]">
             <thead>
               <tr className="border-b-2 border-[#E9ECEF]">
                 <th className="text-left py-2 md:py-3 px-2 text-[10px] md:text-xs font-bold uppercase text-[#7F8C8D]">City</th>
@@ -262,26 +262,26 @@ export function TourCitiesSection() {
               {sortedCities.map(city => (
                 <tr
                   key={city.id}
-                  className="border-b border-[#E9ECEF] cursor-pointer transition-colors active:bg-[#F8F9FA] md:hover:bg-[#F8F9FA]"
+                  className="border-b border-[#E9ECEF] cursor-pointer transition-all active:bg-[#F8F9FA] active:scale-[0.99] md:hover:bg-[#F8F9FA]"
                   onClick={() => setSelectedCity(city)}
                 >
-                  <td className="py-2 md:py-4 px-2">
+                  <td className="py-3 md:py-4 px-2">
                     <div>
                       <p className="font-bold text-sm md:text-base">{city.city}</p>
                       <p className="text-[10px] md:text-xs text-[#7F8C8D]">{city.country}</p>
                     </div>
                   </td>
-                  <td className="text-center font-bold text-sm md:text-base px-1">{city.shows}</td>
-                  <td className="text-right font-bold text-[#FF6B35] text-xs md:text-base px-1">
+                  <td className="py-3 md:py-4 text-center font-bold text-sm md:text-base px-1">{city.shows}</td>
+                  <td className="py-3 md:py-4 text-right font-bold text-[#FF6B35] text-xs md:text-base px-1">
                     {city.revenue ? formatCurrency(city.revenue, true) : '-'}
                   </td>
-                  <td className="text-right font-bold text-sm md:text-base px-1 hidden sm:table-cell">
+                  <td className="py-3 md:py-4 text-right font-bold text-sm md:text-base px-1 hidden sm:table-cell">
                     {city.attendance ? city.attendance.toLocaleString() : '-'}
                   </td>
-                  <td className="text-center px-1">
+                  <td className="py-3 md:py-4 text-center px-1">
                     <DataQualityBadge quality={city.dataQuality} />
                   </td>
-                  <td className="text-center px-1">
+                  <td className="py-3 md:py-4 text-center px-1">
                     <svg className="w-4 h-4 md:w-5 md:h-5 text-[#7F8C8D] inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
@@ -292,9 +292,11 @@ export function TourCitiesSection() {
           </table>
         </div>
 
-        <p className="text-[10px] md:text-xs text-[#7F8C8D] mt-3 md:mt-4">
-          Click any row to see full economic impact breakdown using the academic model
-        </p>
+        <div className="mt-3 md:mt-4 p-2 md:p-3 rounded-lg bg-[#F8F9FA] border border-[#E9ECEF]">
+          <p className="text-xs md:text-sm text-[#7F8C8D] font-medium">
+            👆 <span className="md:hidden">Tap</span><span className="hidden md:inline">Click</span> any row to see full economic impact breakdown
+          </p>
+        </div>
       </div>
 
       {/* Modal */}
