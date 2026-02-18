@@ -44,10 +44,10 @@ export function Layout({ children }: { children: ReactNode }) {
       </header>
 
       {/* Disclaimer */}
-      <div className="bg-[#F7B801]/10 border-y border-[#F7B801]/20">
+      <div className="bg-[#FFF8F0] border-l-4 border-primary">
         <div className="mx-auto max-w-7xl px-4 py-4">
           <div className="flex items-start gap-3">
-            <span className="text-[#F7B801] font-bold text-lg mt-0.5">i</span>
+            <span className="text-primary font-bold text-lg mt-0.5">i</span>
             <div>
               <p className="font-bold text-sm">Independent Research Project &mdash; Not Affiliated with Bad Bunny</p>
                   <p className="text-sm text-[#7F8C8D] mt-1">
@@ -65,36 +65,36 @@ export function Layout({ children }: { children: ReactNode }) {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-[#E9ECEF] bg-[#F8F9FA]">
+      <footer className="bg-secondary text-white/80">
         <div className="mx-auto max-w-7xl px-4 py-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
             <div>
-              <h4 className="font-bold uppercase text-xs tracking-wider mb-3">ABOUT</h4>
-              <p className="text-[#7F8C8D] leading-relaxed">
+              <h4 className="font-bold uppercase text-xs tracking-wider mb-3 text-white">ABOUT</h4>
+              <p className="text-white/70 leading-relaxed">
                 Academic analysis of the economic impact of Bad Bunny's Puerto Rico residency (2022) and DeBi TiRaR MaS fOtOs (DTMF) World Tour using peer-reviewed methodology and verified data sources.
               </p>
             </div>
             <div>
-              <h4 className="font-bold uppercase text-xs tracking-wider mb-3">DATA SOURCES</h4>
-              <ul className="text-[#7F8C8D] space-y-1">
-                <li><a href="https://www.billboard.com/pro/" target="_blank" rel="noopener noreferrer" className="hover:text-[#FF6B35] underline-offset-2 hover:underline">Billboard Boxscore</a></li>
-                <li><a href="https://www.theguardian.com/" target="_blank" rel="noopener noreferrer" className="hover:text-[#FF6B35] underline-offset-2 hover:underline">The Guardian</a></li>
-                <li><a href="https://wearemitu.com/" target="_blank" rel="noopener noreferrer" className="hover:text-[#FF6B35] underline-offset-2 hover:underline">We Are Mitú</a></li>
+              <h4 className="font-bold uppercase text-xs tracking-wider mb-3 text-white">DATA SOURCES</h4>
+              <ul className="text-white/70 space-y-1">
+                <li><a href="https://www.billboard.com/pro/" target="_blank" rel="noopener noreferrer" className="hover:text-primary underline-offset-2 hover:underline">Billboard Boxscore</a></li>
+                <li><a href="https://www.theguardian.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary underline-offset-2 hover:underline">The Guardian</a></li>
+                <li><a href="https://wearemitu.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary underline-offset-2 hover:underline">We Are Mitú</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-bold uppercase text-xs tracking-wider mb-3">METHODOLOGY</h4>
-              <p className="text-[#7F8C8D] leading-relaxed">
-                Economic impact calculations use <strong>Saayman, M. & Saayman, A. (2004)</strong>, "Economic Impact of Cultural Events" methodology. This peer-reviewed model measures direct spending, leakages, and multiplier effects to calculate total economic impact and GDP contribution.
+              <h4 className="font-bold uppercase text-xs tracking-wider mb-3 text-white">METHODOLOGY</h4>
+              <p className="text-white/70 leading-relaxed">
+                Economic impact calculations use <strong className="text-white/90">Saayman, M. & Saayman, A. (2004)</strong>, "Economic Impact of Cultural Events" methodology. This peer-reviewed model measures direct spending, leakages, and multiplier effects to calculate total economic impact and GDP contribution.
               </p>
-              <p className="text-[#7F8C8D] text-xs mt-2">
-                <a href="https://sajems.org/index.php/sajems/article/view/1294" target="_blank" rel="noopener noreferrer" className="hover:text-[#FF6B35] underline-offset-2 hover:underline">
+              <p className="text-white/70 text-xs mt-2">
+                <a href="https://sajems.org/index.php/sajems/article/view/1294" target="_blank" rel="noopener noreferrer" className="hover:text-primary underline-offset-2 hover:underline">
                   View paper →
                 </a>
               </p>
             </div>
           </div>
-          <div className="border-t border-[#E9ECEF] mt-8 pt-6 text-center text-xs text-[#7F8C8D]">
+          <div className="border-t border-white/10 mt-8 pt-6 text-center text-xs text-white/50">
             <p>Created with data journalism principles &mdash; Not affiliated with Bad Bunny &mdash; {new Date().getFullYear()}</p>
           </div>
         </div>
