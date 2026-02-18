@@ -27,9 +27,9 @@ export function ModelVisualization() {
               <em> South African Journal of Economic and Management Sciences, 7</em>(4), 622-648.
             </p>
             <p className="text-xs text-[#7F8C8D] mb-4">
-              This peer-reviewed methodology is widely used in tourism economics to assess the economic
+              This peer-reviewed methodology manages to assess the economic
               contribution of festivals, concerts, and cultural events. The model accounts for both direct
-              and indirect economic effects while rigorously identifying leakages.
+              and indirect economic effects while identifying leakages. It works in three steps.
             </p>
             <a
               href="https://sajems.org/index.php/sajems/article/view/1294"
@@ -202,26 +202,6 @@ export function ModelVisualization() {
           <ul className="text-sm space-y-1.5 text-[#7F8C8D]">
             <li>• Based on assumptions (tourist %, spending rates)</li>
             <li>• Cannot measure intangible impacts</li>
-          </ul>
-        </div>
-        <div className="p-5 rounded-xl bg-white border border-[#E9ECEF]">
-          <h4 className="font-bold mb-2 flex items-center gap-2">
-            <span className="text-[#004E89]">📊</span>
-            Empirical approach
-          </h4>
-          <ul className="text-sm space-y-1.5 text-[#7F8C8D]">
-            <li>• 400 visitor surveys (demand-side)</li>
-            <li>• ~50 business surveys (supply-side leakages)</li>
-          </ul>
-        </div>
-        <div className="p-5 rounded-xl bg-white border border-[#E9ECEF]">
-          <h4 className="font-bold mb-2 flex items-center gap-2">
-            <span className="text-[#FF6B35]">📋</span>
-            Data collected
-          </h4>
-          <ul className="text-sm space-y-1.5 text-[#7F8C8D]">
-            <li>• Spending patterns by category</li>
-            <li>• Tourist vs local segmentation</li>
           </ul>
         </div>
       </div>

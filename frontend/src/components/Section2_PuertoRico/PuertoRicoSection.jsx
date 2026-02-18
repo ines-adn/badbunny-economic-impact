@@ -26,6 +26,9 @@ export function PuertoRicoSection() {
         <p className="text-lg text-[#7F8C8D] mt-2">
           "No Me Quiero Ir de Aquí" • Coliseo de Puerto Rico • July-Sept 2025
         </p>
+        <p className="text-sm text-[#7F8C8D] mt-1">
+          In 2025, Bad Bunny held a historic 31-show residency in Puerto Rico, that had a significant economic impact on the island.
+        </p>
       </div>
 
       {/* Hero stats */}

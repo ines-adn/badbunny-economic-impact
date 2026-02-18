@@ -34,7 +34,7 @@ export function Layout({ children }: { children: ReactNode }) {
               </h1>
 
               <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed font-medium">
-                Academic analysis of the economic impact of cultural events using <strong className="text-accent">verified data</strong> and <strong className="text-accent">peer-reviewed methodology</strong>
+                Analysis of the economic impact of Bad Bunny's DtMF Tour using <strong className="text-accent">sourced data</strong> and <strong className="text-accent">an academic methodology</strong>
               </p>
 
               {/* Navigation - Bold pill style */}
