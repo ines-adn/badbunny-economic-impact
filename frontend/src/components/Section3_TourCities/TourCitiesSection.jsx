@@ -46,8 +46,12 @@ const CityDetailModal = ({ city, onClose }) => {
               <h3 className="text-xl md:text-2xl font-extrabold">{city.city}, {city.country}</h3>
               <p className="text-sm md:text-base text-[#7F8C8D]">{city.venue}</p>
             </div>
-            <button onClick={onClose} className="text-[#7F8C8D] active:text-black md:hover:text-black">
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <button
+              onClick={onClose}
+              className="shrink-0 w-10 h-10 md:w-8 md:h-8 flex items-center justify-center rounded-full bg-[#F8F9FA] text-[#7F8C8D] active:bg-[#E9ECEF] md:hover:bg-[#E9ECEF] active:text-black md:hover:text-black transition-colors -mt-1 -mr-1"
+              aria-label="Close"
+            >
+              <svg className="w-5 h-5 md:w-4 md:h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
@@ -55,6 +59,12 @@ const CityDetailModal = ({ city, onClose }) => {
           <div className="text-center py-12">
             <DataQualityBadge quality={city.dataQuality} />
             <p className="text-[#7F8C8D] mt-4">{city.estimationNote || 'No economic data available yet'}</p>
+            <button
+              onClick={onClose}
+              className="mt-8 px-6 py-3 rounded-full bg-[#004E89] text-white font-bold text-sm md:hidden active:bg-[#003d6e]"
+            >
+              Close
+            </button>
           </div>
         </div>
       </div>
@@ -75,8 +85,12 @@ const CityDetailModal = ({ city, onClose }) => {
               {city.dates.length} shows • {city.dates[0]} {city.dates.length > 1 && `- ${city.dates[city.dates.length - 1]}`}
             </p>
           </div>
-          <button onClick={onClose} className="text-[#7F8C8D] hover:text-black">
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <button
+            onClick={onClose}
+            className="shrink-0 w-10 h-10 md:w-8 md:h-8 flex items-center justify-center rounded-full bg-[#F8F9FA] text-[#7F8C8D] active:bg-[#E9ECEF] md:hover:bg-[#E9ECEF] active:text-black md:hover:text-black transition-colors -mt-1 -mr-1"
+            aria-label="Close"
+          >
+            <svg className="w-5 h-5 md:w-4 md:h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
@@ -186,6 +200,14 @@ const CityDetailModal = ({ city, onClose }) => {
             </div>
           </div>
         )}
+
+        {/* Mobile close button */}
+        <button
+          onClick={onClose}
+          className="mt-6 w-full px-6 py-3 rounded-full bg-[#004E89] text-white font-bold text-sm md:hidden active:bg-[#003d6e]"
+        >
+          Close
+        </button>
       </div>
     </div>
   );
