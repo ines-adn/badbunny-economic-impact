@@ -76,59 +76,83 @@ export function Layout({ children }: { children: ReactNode }) {
         </div>
       </header>
 
-      {/* Disclaimer */}
-      <div className="bg-[#FFF8F0] border-l-4 border-primary">
-        <div className="mx-auto max-w-7xl px-4 py-4">
-          <div className="flex items-start gap-3">
-            <span className="text-primary font-bold text-lg mt-0.5">i</span>
+      {/* Disclaimer - Playful dashed banner */}
+      <div className="bg-accent/15 border-y-4 border-dashed border-teal/40">
+        <div className="mx-auto max-w-7xl px-6 py-5">
+          <div className="flex items-start gap-4">
+            <div className="shrink-0 w-12 h-12 rounded-full bg-primary flex items-center justify-center font-black text-white text-xl shadow-lg">
+              ℹ️
+            </div>
             <div>
-              <p className="font-bold text-sm">Independent Research Project &mdash; Not Affiliated with Bad Bunny</p>
-                  <p className="text-sm text-[#7F8C8D] mt-1">
-                  This dashboard is built as side-project for <strong>educational and analytical purposes only</strong>. It is not directly linked to any officials.<br />
-                  Data quality is indicated with 🟢 Verified, 🟡 Estimated, or 🔴 Unknown badges.
-                  </p>
+              <p className="font-bold text-base text-text uppercase tracking-wide">Independent Project — Not Affiliated with Bad Bunny</p>
+              <p className="text-sm text-text-light mt-2 leading-relaxed">
+                This dashboard is built as a side-project for <strong>educational and analytical purposes only</strong>. It is not directly linked to any officials.
+                Data quality is indicated with <span className="inline-block px-2 py-0.5 bg-success/20 text-success rounded-full font-semibold text-xs">🟢 Verified</span>, <span className="inline-block px-2 py-0.5 bg-accent/40 text-text rounded-full font-semibold text-xs">🟡 Estimated</span>, or <span className="inline-block px-2 py-0.5 bg-primary/20 text-primary rounded-full font-semibold text-xs">🔴 Unknown</span> badges.
+              </p>
             </div>
           </div>
         </div>
       </div>
 
       {/* Main content */}
-      <main className="mx-auto max-w-7xl px-4 py-10 flex flex-col gap-16">
+      <main className="mx-auto max-w-7xl px-6 py-12 flex flex-col gap-20">
         {children}
       </main>
 
-      {/* Footer */}
-      <footer className="bg-secondary text-white/80">
-        <div className="mx-auto max-w-7xl px-4 py-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
+      {/* Footer - Tropical dark theme */}
+      <footer className="bg-text text-white/90 relative overflow-hidden mt-16">
+        {/* Decorative elements */}
+        <div className="absolute top-0 right-0 w-64 h-64 bg-teal/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-48 h-48 bg-accent/10 rounded-full blur-3xl"></div>
+
+        <div className="relative mx-auto max-w-7xl px-6 py-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-sm">
             <div>
-              <h4 className="font-bold uppercase text-xs tracking-wider mb-3 text-white">ABOUT</h4>
-              <p className="text-white/70 leading-relaxed">
-                Academic analysis of the economic impact of Bad Bunny's Puerto Rico residency (2022) and DeBi TiRaR MaS fOtOs (DTMF) World Tour using peer-reviewed methodology and verified data sources.
+              <h4 className="font-bold uppercase text-sm tracking-wider mb-4 text-accent">📊 About</h4>
+              <p className="text-white/80 leading-relaxed">
+                Academic analysis of the economic impact of Bad Bunny's Puerto Rico residency (2025) and <strong className="text-white">DeBí TiRaR MáS FoTóS (DTMF)</strong> World Tour using peer-reviewed methodology and verified data sources.
               </p>
             </div>
             <div>
-              <h4 className="font-bold uppercase text-xs tracking-wider mb-3 text-white">DATA SOURCES</h4>
-              <ul className="text-white/70 space-y-1">
-                <li><a href="https://www.billboard.com/pro/" target="_blank" rel="noopener noreferrer" className="hover:text-primary underline-offset-2 hover:underline">Billboard Boxscore</a></li>
-                <li><a href="https://www.theguardian.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary underline-offset-2 hover:underline">The Guardian</a></li>
-                <li><a href="https://wearemitu.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary underline-offset-2 hover:underline">We Are Mitú</a></li>
+              <h4 className="font-bold uppercase text-sm tracking-wider mb-4 text-accent">📚 Data Sources</h4>
+              <ul className="text-white/80 space-y-2">
+                <li>
+                  <a href="https://www.billboard.com/pro/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors inline-flex items-center gap-1 underline-offset-4 hover:underline">
+                    Billboard Boxscore →
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.theguardian.com/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors inline-flex items-center gap-1 underline-offset-4 hover:underline">
+                    The Guardian →
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wearemitu.com/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors inline-flex items-center gap-1 underline-offset-4 hover:underline">
+                    We Are Mitú →
+                  </a>
+                </li>
+                <li className="text-white/70">Official press releases</li>
               </ul>
             </div>
             <div>
-              <h4 className="font-bold uppercase text-xs tracking-wider mb-3 text-white">METHODOLOGY</h4>
-              <p className="text-white/70 leading-relaxed">
-                Economic impact calculations use <strong className="text-white/90">Saayman, M. & Saayman, A. (2004)</strong>, "Economic Impact of Cultural Events" methodology. This peer-reviewed model measures direct spending, leakages, and multiplier effects to calculate total economic impact and GDP contribution.
+              <h4 className="font-bold uppercase text-sm tracking-wider mb-4 text-accent">🔬 Methodology</h4>
+              <p className="text-white/80 leading-relaxed mb-3">
+                Economic impact calculations use <strong className="text-white">Saayman, M. & Saayman, A. (2004)</strong>, "Economic Impact of Cultural Events" methodology.
               </p>
-              <p className="text-white/70 text-xs mt-2">
-                <a href="https://sajems.org/index.php/sajems/article/view/1294" target="_blank" rel="noopener noreferrer" className="hover:text-primary underline-offset-2 hover:underline">
-                  View paper →
-                </a>
-              </p>
+              <a href="https://sajems.org/index.php/sajems/article/view/1294" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-accent hover:text-accent/80 transition-colors font-bold text-sm">
+                View paper
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
             </div>
           </div>
-          <div className="border-t border-white/10 mt-8 pt-6 text-center text-xs text-white/50">
-            <p>Created with data journalism principles &mdash; Not affiliated with Bad Bunny &mdash; {new Date().getFullYear()}</p>
+
+          <div className="border-t-2 border-dashed border-white/20 mt-10 pt-6 text-center">
+            <p className="text-white/60 text-sm">
+              Created with research, interest and vibe coding (Claude Code) — Not affiliated with Bad Bunny — {new Date().getFullYear()}
+            </p>
+            <p className="text-accent/80 text-xs mt-2 font-semibold">🐸 Seguimo Aquí 🌴</p>
           </div>
         </div>
       </footer>
