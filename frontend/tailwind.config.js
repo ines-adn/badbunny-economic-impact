@@ -5,27 +5,37 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Warm, modern palette
-        primary: '#E85D3A',       // Warm coral/orange
-        secondary: '#1B2A4A',     // Deep navy (softer than black)
-        accent: '#F2C94C',        // Warm yellow
+        // Vibrant tropical palette inspired by DTMF & PR imagery
+        primary: '#f0393e',       // Bold red (depuertoricopalmundo.com)
+        secondary: '#5BA3D4',     // Sky blue (from images)
+        accent: '#F5ED4E',        // Bright yellow (Puerto Rico badge)
+        teal: '#2A998B',          // Teal green (Puerto Rico text)
+        coral: '#E8844A',         // Coral orange (frog character)
         success: '#27AE60',       // Success green
-        text: '#1B2A4A',          // Deep navy for text
-        'text-light': '#8896A5',  // Light gray
-        'bg-alt': '#F0EDE8',      // Light warm gray
-        border: '#E0DCD5',        // Subtle warm border
-        navy: '#1B2A4A',
-        cream: '#FAF8F5',         // Warm off-white
+        text: '#281f1d',          // Dark brown (from website)
+        'text-light': '#6B7280',  // Medium gray
+        'bg-alt': '#eeede8',      // Cream (from website)
+        'bg-blue': '#e8f4f8',     // Light blue tint
+        border: '#D1D5DB',        // Neutral border
+        navy: '#1e3a5f',          // Navy blue
+        cream: '#eeede8',         // Cream background
       },
       fontFamily: {
-        sans: ['"Inter"', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'sans-serif'],
+        sans: ['"Inter"', 'Helvetica', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        display: ['"Outfit"', '"Inter"', 'sans-serif'],
       },
       borderRadius: {
         '2xl': '1rem',
         '3xl': '1.5rem',
+        '4xl': '2rem',
       },
       backgroundImage: {
-        'gradient-hero': 'linear-gradient(135deg, #1B2A4A 0%, #E85D3A 50%, #F26B3A 100%)',
+        'gradient-hero': 'linear-gradient(135deg, #5BA3D4 0%, #2A998B 100%)',
+        'gradient-tropical': 'linear-gradient(180deg, #5BA3D4 0%, #e8f4f8 100%)',
+      },
+      boxShadow: {
+        'bold': '4px 4px 0px 0px rgba(40, 31, 29, 1)',
+        'bold-hover': '6px 6px 0px 0px rgba(40, 31, 29, 1)',
       },
     },
   },

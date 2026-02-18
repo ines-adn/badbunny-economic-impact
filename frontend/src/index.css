@@ -1,3 +1,6 @@
+/* Import bold display font */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,6 +12,15 @@
 
   body {
     @apply bg-cream text-text;
+    font-weight: 500;
+  }
+
+  /* Bold, playful typography */
+  h1, h2, h3 {
+    font-family: 'Outfit', 'Inter', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
   }
 }
 

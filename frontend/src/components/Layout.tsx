@@ -10,36 +10,69 @@ export function Layout({ children }: { children: ReactNode }) {
   };
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Header */}
-      <header className="bg-gradient-hero text-white">
-        <div className="mx-auto max-w-7xl px-4 py-12 md:py-20">
-          <p className="text-[#F7B801] font-semibold text-sm uppercase tracking-[0.2em] mb-4">
-            Economic Impact Analysis
-          </p>
-          <h1 className="text-5xl md:text-7xl font-black tracking-tight mb-4">
-            BAD BUNNY
-          </h1>
-          <p className="text-xl md:text-2xl text-white/80 max-w-2xl">
-            Academic analysis of the economic impact of cultural events using verified data and peer-reviewed methodology
-          </p>
+    <div className="min-h-screen">
+      {/* Hero Header - Tropical, playful design */}
+      <header className="bg-gradient-hero text-white relative overflow-hidden">
+        {/* Decorative background pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 left-10 w-32 h-32 bg-accent rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 right-10 w-40 h-40 bg-primary rounded-full blur-3xl"></div>
+        </div>
 
-          {/* Navigation */}
-          <nav className="flex flex-wrap gap-2 mt-8">
-            {SECTIONS.map(s => (
-              <button
-                key={s.id}
-                onClick={() => scrollTo(s.id)}
-                className={`nav-pill ${
-                  active === s.id
-                    ? 'bg-white text-[#004E89] shadow-lg'
-                    : 'bg-white/10 text-white/80 hover:bg-white/20'
-                }`}
-              >
-                {s.label.toUpperCase()}
-              </button>
-            ))}
-          </nav>
+        <div className="relative mx-auto max-w-7xl px-6 py-16 md:py-20">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            {/* Left side - Text content */}
+            <div>
+              <div className="inline-block mb-4 px-4 py-2 bg-accent text-text rounded-full font-bold text-sm uppercase tracking-wider">
+                📊 Economic Impact Analysis
+              </div>
+
+              <h1 className="text-6xl md:text-8xl font-display font-black mb-6 leading-none">
+                <span className="text-accent drop-shadow-lg">BAD</span>
+                <br />
+                <span className="text-white drop-shadow-lg">BUNNY</span>
+              </h1>
+
+              <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed font-medium">
+                Academic analysis of the economic impact of cultural events using <strong className="text-accent">verified data</strong> and <strong className="text-accent">peer-reviewed methodology</strong>
+              </p>
+
+              {/* Navigation - Bold pill style */}
+              <nav className="flex flex-wrap gap-3">
+                {SECTIONS.map(s => (
+                  <button
+                    key={s.id}
+                    onClick={() => scrollTo(s.id)}
+                    className={`px-6 py-3 rounded-full font-bold text-sm uppercase tracking-wide transition-all duration-200 ${
+                      active === s.id
+                        ? 'bg-accent text-text shadow-bold hover:shadow-bold-hover transform hover:-translate-y-1'
+                        : 'bg-white/20 text-white hover:bg-white/30 border-2 border-white/30'
+                    }`}
+                  >
+                    {s.label}
+                  </button>
+                ))}
+              </nav>
+            </div>
+
+            {/* Right side - Graphic */}
+            <div className="hidden md:flex justify-center items-center">
+              <div className="relative">
+                <img
+                  src="/puerto_rico_image_frog.jpg"
+                  alt="Puerto Rico 2025"
+                  className="w-80 h-auto drop-shadow-2xl transform hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Wave decoration at bottom */}
+        <div className="absolute bottom-0 left-0 right-0">
+          <svg viewBox="0 0 1440 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
+            <path d="M0 48h1440V0s-187.5 48-360 48S720 0 720 0 532.5 48 360 48 0 0 0 0v48z" fill="#eeede8"/>
+          </svg>
         </div>
       </header>
 
