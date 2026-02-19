@@ -30,7 +30,7 @@ export default {
         '4xl': '2rem',
       },
       backgroundImage: {
-        'gradient-hero': 'linear-gradient(135deg, #5BA3D4 0%, #2A998B 100%)',
+        'gradient-hero': 'linear-gradient(135deg, #5BA3D4 0%, #4A90C9 50%, #3B7DB8 100%)',
         'gradient-tropical': 'linear-gradient(180deg, #5BA3D4 0%, #e8f4f8 100%)',
       },
       boxShadow: {

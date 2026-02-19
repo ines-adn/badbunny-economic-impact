@@ -54,13 +54,22 @@ export function BeyondEconomicsSection() {
 
   return (
     <section id="beyond" className="flex flex-col gap-8">
-      <div>
-        <h2 className="text-3xl md:text-4xl font-extrabold uppercase tracking-tight">
-          Beyond economics
-        </h2>
-        <p className="text-lg text-[#7F8C8D] mt-2">
-          Intangible impacts not captured by the model
-        </p>
+      <div className="grid md:grid-cols-[1fr_auto] gap-6 items-center">
+        <div>
+          <h2 className="text-3xl md:text-4xl font-extrabold uppercase tracking-tight">
+            Beyond economics
+          </h2>
+          <p className="text-lg text-[#7F8C8D] mt-2">
+            Intangible impacts not captured by the model
+          </p>
+        </div>
+        <div className="hidden md:block">
+          <img
+            src="/bb_face.jpg"
+            alt="Bad Bunny"
+            className="w-32 h-32 rounded-full object-cover drop-shadow-xl border-4 border-white transform hover:scale-105 transition-transform duration-300"
+          />
+        </div>
       </div>
 
       {/* Explainer card */}

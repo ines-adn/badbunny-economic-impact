@@ -8,8 +8,8 @@ import { BeyondEconomicsSection } from './components/Section5_Beyond/BeyondEcono
 export default function App() {
   return (
     <Layout>
-      <ModelVisualization />
       <PuertoRicoSection />
+      <ModelVisualization />
       <TourCitiesSection />
       <CustomCalculator />
       <BeyondEconomicsSection />

@@ -13,8 +13,8 @@ export const COLORS = {
 };
 
 export const SECTIONS = [
-  { id: 'model', label: 'The Model', emoji: '📊' },
   { id: 'puerto-rico', label: 'Puerto Rico', emoji: '🇵🇷' },
+  { id: 'model', label: 'The Model', emoji: '📊' },
   { id: 'tour', label: 'Tour Cities', emoji: '🌎' },
   { id: 'calculator', label: 'Simulator', emoji: '🧮' },
   { id: 'beyond', label: 'Beyond Economics', emoji: '✨' },

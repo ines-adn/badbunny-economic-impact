@@ -144,7 +144,7 @@ export function Layout({ children }: { children: ReactNode }) {
 
           <div className="border-t-2 border-dashed border-white/20 mt-10 pt-6 text-center">
             <p className="text-white/60 text-sm">
-              Created with research, interest and vibe coding (Claude Code) — Not affiliated with Bad Bunny — {new Date().getFullYear()}
+              Created by Inès Adnani with vibe coding (Claude Code) — Not affiliated with Bad Bunny — {new Date().getFullYear()}
             </p>
             <p className="text-accent/80 text-xs mt-2 font-semibold">🐸 Seguimo Aquí 🌴</p>
           </div>

@@ -15,20 +15,29 @@ export function PuertoRicoSection() {
 
   return (
     <section id="puerto-rico" className="flex flex-col gap-8">
-      {/* Header */}
-      <div>
-        <div className="inline-block px-3 py-1 rounded-full bg-[#2A9D8F]/10 text-[#2A9D8F] text-xs font-bold uppercase tracking-wider mb-3">
-          Primary Case Study
+      {/* Header with graphic */}
+      <div className="grid md:grid-cols-[1fr_auto] gap-6 items-center">
+        <div>
+          <div className="inline-block px-3 py-1 rounded-full bg-[#2A9D8F]/10 text-[#2A9D8F] text-xs font-bold uppercase tracking-wider mb-3">
+            Primary Case Study
+          </div>
+          <h2 className="text-3xl md:text-4xl font-extrabold uppercase tracking-tight">
+            Puerto Rico Residency
+          </h2>
+          <p className="text-lg text-[#7F8C8D] mt-2">
+            "No Me Quiero Ir de Aquí" • Coliseo de Puerto Rico • July-Sept 2025
+          </p>
+          <p className="text-sm text-[#7F8C8D] mt-1">
+            In 2025, Bad Bunny held a historic 31-show residency in Puerto Rico, that had a significant economic impact on the island.
+          </p>
         </div>
-        <h2 className="text-3xl md:text-4xl font-extrabold uppercase tracking-tight">
-          Puerto Rico Residency
-        </h2>
-        <p className="text-lg text-[#7F8C8D] mt-2">
-          "No Me Quiero Ir de Aquí" • Coliseo de Puerto Rico • July-Sept 2025
-        </p>
-        <p className="text-sm text-[#7F8C8D] mt-1">
-          In 2025, Bad Bunny held a historic 31-show residency in Puerto Rico, that had a significant economic impact on the island.
-        </p>
+        <div className="hidden md:block">
+          <img
+            src="/puerto_rico_image_frog.jpg"
+            alt="Puerto Rico"
+            className="w-40 h-auto drop-shadow-xl transform hover:scale-105 transition-transform duration-300"
+          />
+        </div>
       </div>
 
       {/* Hero stats */}
@@ -37,12 +46,12 @@ export function PuertoRicoSection() {
           <p className="text-xs font-bold uppercase tracking-wider text-[#7F8C8D] mb-1">
             Attendees{' '}
             <InfoTooltip
-              text="Source: The Guardian (2025) - 400,000 expected attendees across 30 shows, two-thirds from overseas"
+              text="Source: The Guardian (2025) - 400,000 expected attendees across 31 shows, two-thirds from overseas"
               link="https://www.theguardian.com/music/2025/aug/07/bad-bunny-puerto-rico-residency-show"
             />
           </p>
           <p className="text-3xl font-extrabold text-[#FF6B35]">400,000</p>
-          <p className="text-xs text-[#7F8C8D] mt-1">30 shows • 67% tourists</p>
+          <p className="text-xs text-[#7F8C8D] mt-1">31 shows • 67% tourists</p>
         </div>
         <div className="p-5 rounded-2xl bg-gradient-to-br from-[#004E89]/10 to-[#004E89]/5 border border-[#004E89]/20">
           <p className="text-xs font-bold uppercase tracking-wider text-[#7F8C8D] mb-1">

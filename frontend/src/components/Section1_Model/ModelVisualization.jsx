@@ -3,7 +3,7 @@ import { InfoTooltip } from '../shared/InfoTooltip';
 export function ModelVisualization() {
   return (
     <section id="model" className="flex flex-col gap-8">
-      <div>
+      <div className="p-6 md:p-8 rounded-2xl bg-gradient-to-br from-[#5BA3D4]/10 to-[#4A90C9]/5 border-l-4 border-[#5BA3D4]">
         <h2 className="text-3xl md:text-4xl font-extrabold uppercase tracking-tight">
           The academic model
         </h2>
